@@ -9,12 +9,12 @@ public class Ejercicio06 {
 		String frase;
 		System.out.println("Introduce una frase de 80 caracteres como maximo");
 		frase= teclado.nextLine();
-		while(frase.length()>80)
-		{
-			System.out.println("ERROR: ");
-			System.out.println("Introduce una frase de 80 caracteres como maximo");
-			frase= teclado.nextLine();
-		}
+//		while(frase.length()>80)
+//		{
+//			System.out.println("ERROR: ");
+//			System.out.println("Introduce una frase de 80 caracteres como maximo");
+//			frase= teclado.nextLine();
+//		}
 		frase = frase.toLowerCase();
 		for(i=0;i<frase.length();i++)
 		{
