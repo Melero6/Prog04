@@ -12,7 +12,7 @@ public class Ejercicio03 {
 		if (frase.indexOf(palabra)==-1)
 			System.out.println("0");
 		else
-		System.out.println("La palabra empieza en la posición: "+frase.indexOf(palabra));
+			System.out.println("La palabra empieza en la posición: "+frase.indexOf(palabra));
 	}
 
 }

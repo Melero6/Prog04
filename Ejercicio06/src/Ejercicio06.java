@@ -7,14 +7,11 @@ public class Ejercicio06 {
 		Scanner teclado=new Scanner(System.in);
 		int i , vocales=0, consonantes=0, numeros=0;
 		String frase;
-		System.out.println("Introduce una frase de 80 caracteres como maximo");
-		frase= teclado.nextLine();
-//		while(frase.length()>80)
-//		{
-//			System.out.println("ERROR: ");
-//			System.out.println("Introduce una frase de 80 caracteres como maximo");
-//			frase= teclado.nextLine();
-//		}
+		do{
+			System.out.println("Escribe una frase de menos de 80 caracteres: ");
+			frase=teclado.nextLine();
+		} while(frase.length()>80);
+		
 		frase = frase.toLowerCase();
 		for(i=0;i<frase.length();i++)
 		{

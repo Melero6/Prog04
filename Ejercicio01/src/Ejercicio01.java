@@ -5,16 +5,16 @@ public class Ejercicio01 {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
 		String entrada;
-		int i,a;
+		int i,j;
 		System.out.print("Introduce la frase: ");
 		entrada=teclado.nextLine();
 		if(entrada.length()<=80)
 		{
 			for(i=0;i<entrada.length();i++)
 			{
-				for(a=0;a<=i;a++)
+				for(j=0;j<=i;j++)
 				{
-					System.out.print(entrada.charAt(a));
+					System.out.print(entrada.charAt(j));
 				}
 				System.out.println();
 			}
