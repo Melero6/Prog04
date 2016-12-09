@@ -1,3 +1,5 @@
+//Escribir un programa que lea una frase (máximo 60 caracteres) y diga cuántas letras distintas tiene y la frecuencia de las mismas, para homogeneizar el conjunto de letras debemos trabajar solo con mayúsculas.
+
 import java.util.Scanner;
 public class Ejercicio10 {
 
@@ -11,17 +13,15 @@ public class Ejercicio10 {
 		{
 			System.out.println("Introduce una entrada de 60 caracteres como maximo: ");
 			entrada= teclado.nextLine();
-		}
-		while(entrada.length()>60);
+		} while(entrada.length()>60);
+		
 		entrada=entrada.toUpperCase();
 		System.out.print("Hay: ");
 		for (int f=65;f<=90;f++)
 		{
 			for (int i=0; i<entrada.length();i++)
-			{
 				if (entrada.charAt(i)==f)
 					++cantidadLetras;
-			}
 
 			if (cantidadLetras!=0)
 			{
@@ -33,7 +33,6 @@ public class Ejercicio10 {
 			cantidadLetras=0;
 		}
 		System.out.println("\nHay: "+letrasDistintas+" letras diferentes.");
-
 	}
 
 }
