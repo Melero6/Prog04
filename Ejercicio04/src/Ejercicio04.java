@@ -1,3 +1,5 @@
+//Leer una cadena de hasta 80 caracteres y pasarla en función de una variable de opción a mayúsculas ó a minúsculas e imprimir la cadena resultante
+
 import java.util.Scanner;
 public class Ejercicio04 {
 

@@ -1,16 +1,18 @@
-		
+//Leer una frase por teclado y escribir a continuación cuantas mayúsculas, minúsculas y números contiene.		
+
 import java.util.Scanner;
 public class Ejercicio07 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
-		int i , mayusculas=0, minusculas=0, numeros=0;
+		int mayusculas=0, minusculas=0, numeros=0;
 		String frase;
+		
 		System.out.println("Introduce una frase:");
 		frase= teclado.nextLine();
 
-		for(i=0;i<frase.length();i++)
+		for(int i=0;i<frase.length();i++)
 		{
 			if (frase.charAt(i)>='A'&&frase.charAt(i)<='Z'||frase.charAt(i)=='Ñ')
 				++mayusculas;
