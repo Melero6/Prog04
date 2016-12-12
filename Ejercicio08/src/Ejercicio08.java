@@ -10,42 +10,44 @@ public class Ejercicio08 {
 		// TODO Auto-generated method stub
 		Scanner teclado = new Scanner(System.in);
 		String entrada;
-		int numCifrado,numCifradoMemoria, i, ascii;
+		int numCifrado, ascii, seleccion;
 		
-		System.out.println("Escribe una frase para cifrarla: ");
+		System.out.println("Escribe una frase para cifrarla:");
 		entrada = teclado.nextLine();
-		entrada= entrada.toUpperCase();
+		entrada = entrada.toUpperCase();
 		
-		System.out.println("Escribe un numero del 1 al 10 para cifrar la frase: ");
-		numCifrado = teclado.nextInt();
-		
-		numCifradoMemoria=numCifrado;
-		
-		while(numCifrado<=0||numCifrado>10)
-			{
-			System.out.println("ERROR: ");
-			System.out.println("Escribe un numero del 1 al 10 para cifrar la frase");
+		do{
+			System.out.println("Escribe un numero del 1 al 10 para cifrar la frase:");
 			numCifrado = teclado.nextInt();
+		} while(numCifrado<=0||numCifrado>10);
+		
+		do{
+			System.out.println("Escribe el numero de la opcion que desee ejecutar:\n1.Cifrar\n2.Descifrar");
+			seleccion = teclado.nextInt();
+			if(seleccion!=1&&seleccion!=2)
+				System.out.println("ERROR! - Escribe 1 o 2 para seleccionar la opcion.");
+		} while(seleccion!=1&&seleccion!=2);
+		
+		switch(seleccion){
+		case(1):
+			System.out.print("Frase cifrada: ");
+			for (int i=0;i<entrada.length();i++)
+			{
+				ascii=entrada.codePointAt(i);
+				ascii+=numCifrado;
+				System.out.print((char)ascii);
 			}
-		
-		System.out.print("Frase cifrada: ");
-		for (i=0;i<entrada.length();i++)
-		{
-			ascii=entrada.codePointAt(i);
-			ascii=ascii+numCifrado;
+			break;
 			
-			System.out.print((char)ascii);
-		}
-		
-		System.out.println("\n\nEscribe el numero para decodificar la frase: ");
-		numCifrado = teclado.nextInt();
-		
-		System.out.print("La frase descifrada: ");
-		for (i=0;i<entrada.length();i++)
-		{
-			ascii=entrada.codePointAt(i)+numCifradoMemoria;
-			ascii=ascii-numCifrado;
-			System.out.print((char)ascii);
+		case(2):
+			System.out.print("La frase descifrada: ");
+			for (int i=0;i<entrada.length();i++)
+			{
+				ascii=entrada.codePointAt(i);
+				ascii-=numCifrado;
+				System.out.print((char)ascii);
+			}
+			break;
 		}
 		
 	}
